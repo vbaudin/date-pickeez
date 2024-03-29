@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import DateTimeRangePickerConfigurator from './components/DatePickerConfigurator/DatePickerConfigurator';
+import DateTimeRangePicker from './components/DatePicker/DatePicker';
+import { PickerContextProvider } from './contexts/DatePickerContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PickerContextProvider>
+        <DateTimeRangePickerConfigurator />
+        <DateTimeRangePicker />
+      </PickerContextProvider>
     </div>
   );
 }

@@ -1,0 +1,45 @@
+.picker-container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.picker-container button {
+  height: fit-content;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.days-of-week, .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 jours de la semaine */
+}
+
+.calendar-day:hover:not(.other-month) {
+  background-color: #77B5FE;
+}
+
+.selected-day {
+  background-color: #5581B6;
+}
+
+.calendar-day, .day-of-week {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  aspect-ratio: 1 / 1;
+  height: 40px;
+}
+
+.other-month {
+  background-color: #f0f0f0;
+  color: #b0b0b0;
+}
+
+.empty {
+  background-color: #f0f0f0;
+}
